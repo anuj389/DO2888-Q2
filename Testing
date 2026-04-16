@@ -1,0 +1,7 @@
+FROM registry.access.redhat.com/ubi9/ubi-micro
+ARG CodeBinary=http://172.25.250.9:80/text.html
+COPY . /app
+WORKDIR /app
+EXPOSE 8080
+CMD ["python3","-m","http.server","8080"]
+EOF	
